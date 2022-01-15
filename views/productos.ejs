@@ -1,0 +1,24 @@
+<%- include layouts/header.ejs %>
+
+  <div class="container">
+      <br><br>
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <% for(var producto=0; producto<calzados.length;producto++){ %>
+       <div class="col">
+          <div class="card">
+            <img style="width: 400px; height: 400px;" src="/images/<%=calzados[producto].foto %>" class="card-img-top" alt="<%=calzados[producto].foto %>">
+            <div class="card-body">
+              <h5 class="card-title"><%=calzados[producto].nombres %></h5>
+              <p class="card-text">$Precio: <%=calzados[producto].precio %></p>
+              <p class="card-text">Descripción: <%=calzados[producto].descripcion %></p>
+            </div>
+          </div>
+        </div>
+        <% }%>
+      </div>
+
+
+
+  </div>
+  
+  <%- include layouts/footer.ejs %>
